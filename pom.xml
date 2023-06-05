@@ -58,42 +58,6 @@
 		</dependency>
 
 		<!--querydsl-->
-		<!--<dependency>
-			<groupId>com.querydsl</groupId>
-			<artifactId>querydsl-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.querydsl</groupId>
-			<artifactId>querydsl-apt</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.eclipse.jdt.core.compiler</groupId>
-					<artifactId>ecj</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>com.querydsl</groupId>
-			<artifactId>querydsl-sql</artifactId>
-			<version>4.1.4</version>
-		</dependency>
-		<dependency>
-			<groupId>com.querydsl</groupId>
-			<artifactId>querydsl-sql-spring</artifactId>
-			<version>4.1.4</version>
-		</dependency>-->
-
-<!--		<dependency>-->
-<!--			<groupId>com.querydsl</groupId>-->
-<!--			<artifactId>querydsl-jpa</artifactId>-->
-<!--			&lt;!&ndash;<version>4.3.1</version>&ndash;&gt;-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>com.querydsl</groupId>-->
-<!--			<artifactId>querydsl-apt</artifactId>-->
-<!--			&lt;!&ndash;<version>4.3.1</version>&ndash;&gt;-->
-<!--		</dependency>-->
-
 		<dependency>
 			<groupId>com.querydsl</groupId>
 			<artifactId>querydsl-core</artifactId>
@@ -110,6 +74,21 @@
 			<artifactId>querydsl-jpa</artifactId>
 			<version>${querydsl.version}</version>
 		</dependency>
+
+		<!--Devtool-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+
+		<!--Thymeleaf-layout-dialect-->
+		<dependency>
+			<groupId>nz.net.ultraq.thymeleaf</groupId>
+			<artifactId>thymeleaf-layout-dialect</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
@@ -144,5 +123,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
