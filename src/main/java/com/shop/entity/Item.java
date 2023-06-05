@@ -23,7 +23,7 @@ public class Item {
     private String itemNm; //상품명
 
     @Column(name = "price", nullable = false)
-    private int pirce; //가격
+    private int price; //가격
 
     @Column(nullable = false)
     private int stockNumber; //재고수량
