@@ -21,7 +21,8 @@ public class ItemController {
     @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
     MockMvc mockMvc;
-
+    
+    //이거 테스트 실패뜸 원인 찾는중 ->  404뜸
     @Test
     @DisplayName("상품 등록 페이지 권한 테스트")
     @WithMockUser(username = "admin", roles = "ADMIN")
