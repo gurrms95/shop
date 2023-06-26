@@ -3,10 +3,6 @@ package com.shop.entity;
 import com.shop.constant.ItemSellStatus;
 import com.shop.repository.ItemRepository;
 import com.shop.repository.OrderRepository;
-<<<<<<< HEAD
-import org.aspectj.weaver.ast.Or;
-=======
->>>>>>> origin/main
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,28 +11,16 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
-<<<<<<< HEAD
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.PersistenceContext;
-
 import java.time.LocalDateTime;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-@SpringBootTest
-@TestPropertySource(locations = "classpath:application-test.properties")
-@Transactional
-class OrderTest {
-
-=======
-import javax.persistence.PersistenceContext;
-import java.time.LocalDateTime;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 @TestPropertySource(locations = "classpath:application-test.properties")
 @Transactional
 public class OrderTest {
->>>>>>> origin/main
     @Autowired
     OrderRepository orderRepository;
 
@@ -46,15 +30,9 @@ public class OrderTest {
     @PersistenceContext
     EntityManager em;
 
-<<<<<<< HEAD
     public Item createTime(){
         Item item = new Item();
         item.setItemNm("테스트 상품");
-=======
-    public  Item createTime(){
-        Item item = new Item();
-        item.setItemNm("테스트상품");
->>>>>>> origin/main
         item.setPrice(10000);
         item.setItemDetail("상세설명");
         item.setItemSellStatus(ItemSellStatus.SELL);
@@ -69,7 +47,6 @@ public class OrderTest {
     public void cascadeTest(){
         Order order = new Order();
 
-<<<<<<< HEAD
         for(int i = 0 ; i < 3 ; i++){
             Item item = this.createTime();
             itemRepository.save(item);
@@ -89,12 +66,3 @@ public class OrderTest {
     }
 
 }
-=======
-        for(int i=0 ; i<3 ; i++){
-            Item item = this.createTime();
-            itemRepository.save(item);
-            OrderItem orderItem = new OrderItem();
-        }
-    }
-}
->>>>>>> origin/main
