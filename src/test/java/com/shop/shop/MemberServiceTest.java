@@ -22,7 +22,7 @@ public class MemberServiceTest {
     @Autowired
     PasswordEncoder passwordEncoder;
 
-    public Member createMember(){
+    public Member createMember() {
         MemberFormDto memberFormDto = new MemberFormDto();
         memberFormDto.setEmail("test@email.com");
         memberFormDto.setName("황길동");
