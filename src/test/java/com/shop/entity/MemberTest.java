@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityExistsException;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityNotFoundException;
 import javax.persistence.PersistenceContext;
 
 @SpringBootTest
@@ -34,7 +35,7 @@ class MemberTest {
         em.flush();
         em.clear();
 
-        Member member = memberRepository.findById(newMember.getId()).orElseThrow(EntityExistsException::new);
+        Member member = memberRepository.findById(newMember.getId()).orElseThrow(EntityNotFoundException::new);
 
         System.out.println("register time : " + member.getRegTime());
         System.out.println("update time : " + member.getUpdateTime());

@@ -19,7 +19,7 @@ public class ItemImgDto {
 
     private static ModelMapper modelMapper = new ModelMapper();
 
-    public static ItemImgDto of(ItemImg itemimg){
-        return modelMapper.map(itemimg,ItemImgDto.class);
+    public static ItemImgDto of(ItemImg itemImg){
+        return modelMapper.map(itemImg,ItemImgDto.class);
     }
 }
